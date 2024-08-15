@@ -35,7 +35,7 @@ class DocentesDataTable extends DataTable
         return datatables()
             ->eloquent($query)
             ->setRowId('id')
-            ->searchPane('suplente', $suplentes)
+/*             ->searchPane('suplente', $suplentes) */
     ;}
 
     /**
@@ -72,21 +72,21 @@ class DocentesDataTable extends DataTable
                         Button::make('print'),
                         Button::make('reset'),
                         Button::make('reload'),
-                        Button::make('searchPanes')
+/*                         Button::make('searchPanes') */
                     ])
-                    ->addColumnDef([
+/*                     ->addColumnDef([
                         'targets' => '_all',
                         'searchPanes' => SearchPane::make()->hideCount()
-                    ])
+                    ]) */
     ;}
 
 
     public function getColumns(): array
     {
         return [
-            Column::make('id')->searchPanes(false),
-            Column::make('name')->searchPanes(false),
-            Column::make('email')->searchPanes(false),
+            Column::make('id')/* ->searchPanes(false) */,
+            Column::make('name')/* ->searchPanes(false) */,
+            Column::make('email')/* ->searchPanes(false) */,
             Column::make('suplente')
         ];
     }
